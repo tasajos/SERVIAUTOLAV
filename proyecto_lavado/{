@@ -1,0 +1,15 @@
+import React, { useState, useEffect } from 'react';
+import api from '../services/api';
+
+interface Vehiculo {
+  id: number;
+  placa: string;
+  tipo: string;
+  hora_entrada: string;
+}
+
+interface Props {
+  refreshTrigger: number;
+}
+
+const VehicleList: React.FC<Props> = ({ refreshTrigger }

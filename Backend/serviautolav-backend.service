@@ -1,0 +1,15 @@
+[Unit]
+Description=ServiAutoLav Backend Node.js Service
+After=network.target
+
+[Service]
+Type=simple
+User=ia
+WorkingDirectory=/home/ia/vmbackend/SERVIAUTOLAV/Backend
+ExecStart=/usr/bin/node /home/ia/vmbackend/SERVIAUTOLAV/Backend/dist/index.js
+Restart=always
+RestartSec=5
+EnvironmentFile=/home/ia/vmbackend/SERVIAUTOLAV/Backend/.env
+
+[Install]
+WantedBy=multi-user.target

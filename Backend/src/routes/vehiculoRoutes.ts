@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { registrarIngreso, obtenerActivos, registrarSalida } from '../controllers/vehiculoController';
+import { registrarIngreso, obtenerActivos, registrarSalida } from '../controllers/vehiculoController.js';
 
 const router = Router();
 router.post('/', registrarIngreso);
